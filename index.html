@@ -4,6 +4,22 @@
 <head>
     <title>Test</title>
     <link href="./index.css" rel="stylesheet" >
+    <script> 
+        var leoIsDead=0
+        var bearIsDead=0
+        function killbears(percentage){
+            if (Math.random()>percentage){
+                leoIsDead=leoIsDead+1
+                document.querySelector("#defeat").textContent=leoIsDead
+            } else{
+                bearIsDead=bearIsDead+1
+                document.querySelector("#victory").textContent=bearIsDead
+            }
+        }
+        function transformation(){
+            document.querySelector("header").style.backgroundImage="url(./SuperLeo.png)"
+        }
+    </script>
 </head>
 
 <body>
@@ -14,7 +30,13 @@
     <section>
         <h1>Can Léo Fight a brown bear?</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Ih3BujsT5qI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p>No.</p>
+        <button onclick="killbears(0.9)">⚔️</button>
+        <button onclick="killbears(0.2)">🛡️</button>
+        <button onclick="transformation()">卐</button>
+             <ul>
+            <li>Léo is dead = <span id="victory">0</span></li>
+            <li>The Bear is dead = <span id="defeat">0</span></li>
+        </ul>
         <h2>And two?</h2>
         <p>Probably not</p>
     </section>
