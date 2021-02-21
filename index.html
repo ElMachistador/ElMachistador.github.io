@@ -3,7 +3,10 @@
 
 <head>
     <title>Test</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="./index.css" rel="stylesheet" >
+    
     <script> 
         var leoIsDead=0
         var bearIsDead=0
@@ -30,9 +33,9 @@
     <section>
         <h1>Can Léo Fight a brown bear?</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/Ih3BujsT5qI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <button onclick="killbears(0.9)">⚔️</button>
-        <button onclick="killbears(0.2)">🛡️</button>
-        <button onclick="transformation()">卐</button>
+        <button type="button" class="btn btn-default" onclick="killbears(0.9)">⚔️</button>
+        <button type="button" class="btn btn-default" onclick="killbears(0.2)">🛡️</button>
+        <button type="button" class="btn btn-default" onclick="transformation()">卐</button>
              <ul>
             <li>Léo is dead = <span id="victory">0</span></li>
             <li>The Bear is dead = <span id="defeat">0</span></li>
